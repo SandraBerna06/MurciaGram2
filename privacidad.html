@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de privacidad · MurciaGram</title>
+  <meta name="description" content="Información sobre el tratamiento de datos personales en MurciaGram conforme al RGPD y la LOPDGDD.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0f5f5c">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body class="auth-page">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <svg class="visually-hidden" aria-hidden="true" focusable="false">
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M11 18l-6-6 6-6"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></symbol>
+  </svg>
+
+  <header class="site-header auth-header">
+    <a class="brand" href="index.html" aria-label="MurciaGram, volver a la galería">
+      <span class="brand__mark" aria-hidden="true"><svg><use href="#i-pin"/></svg></span>
+      <span class="brand__text">Murcia<span>Gram</span></span>
+    </a>
+    <a class="auth-header__link" href="registro.html">
+      <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg>
+      Volver al registro
+    </a>
+  </header>
+
+  <main class="legal-page" id="contenido">
+    <article class="legal-doc">
+      <p class="eyebrow">Información legal</p>
+      <h1>Política de privacidad</h1>
+      <p class="legal-doc__lead">MurciaGram es un proyecto académico de galería turística. Esta página explica qué datos personales se tratan al crear una cuenta, con qué finalidad, durante cuánto tiempo y cómo puedes ejercer tus derechos conforme al Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD).</p>
+      <p class="legal-doc__meta">Última actualización: noviembre de 2026 · Versión 1.0</p>
+
+      <h2>1. Responsable del tratamiento</h2>
+      <p><strong>Responsable:</strong> MurciaGram, proyecto académico de desarrollo web. <strong>Contacto:</strong> <a href="mailto:privacidad@murciagram.es">privacidad@murciagram.es</a>.</p>
+      <p>Antes de publicar la aplicación fuera del ámbito académico, sustituye este correo y los datos identificativos por los de la persona o entidad responsable real. El correo de ejemplo no es un buzón operativo.</p>
+
+      <h2>2. Qué datos se tratan</h2>
+      <section class="legal-doc__table" tabindex="0" aria-label="Datos tratados y obligatoriedad">
+        <table>
+        <thead>
+          <tr><th scope="col">Categoría</th><th scope="col">Datos</th><th scope="col">Obligatorio</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Identificación</td><td>Nombre, apellidos y correo electrónico</td><td>Sí</td></tr>
+          <tr><td>Verificación de edad</td><td>Fecha de nacimiento (se usa para comprobar que tienes al menos 14 años)</td><td>Sí</td></tr>
+          <tr><td>Contacto postal</td><td>Calle y número, código postal, ciudad y provincia</td><td>Sí</td></tr>
+          <tr><td>Contacto telefónico</td><td>Teléfono</td><td>No</td></tr>
+          <tr><td>Preferencias</td><td>Aceptación de comunicaciones comerciales</td><td>No</td></tr>
+          <tr><td>Seguridad y accesos</td><td>Identificador de usuario, fecha y hora de registro y de cada inicio de sesión, navegador utilizado</td><td>Sí (se genera automáticamente)</td></tr>
+          <tr><td>Credenciales</td><td>Correo y contraseña. La contraseña la gestiona Firebase Authentication y <strong>no se almacena en Firestore</strong> ni en ningún almacenamiento propio de MurciaGram</td><td>Sí</td></tr>
+        </tbody>
+        </table>
+      </section>
+      <p>No se solicitan datos especialmente protegidos, no se elaboran perfiles publicitarios y no se usan los datos para tomar decisiones automatizadas con efectos jurídicos.</p>
+
+      <h2>3. Finalidades y base jurídica</h2>
+      <ul>
+        <li><strong>Crear y gestionar tu cuenta</strong> y permitir el acceso: ejecución del servicio solicitado (art. 6.1.b RGPD) y consentimiento al registrarte (art. 6.1.a).</li>
+        <li><strong>Verificar que tienes al menos 14 años</strong>: cumplimiento de la normativa de protección de datos aplicable a menores (art. 8 RGPD y art. 7 LOPDGDD).</li>
+        <li><strong>Registrar los accesos</strong> (fecha, hora y navegador) para seguridad y trazabilidad básica: interés legítimo en proteger la cuenta y el servicio (art. 6.1.f RGPD).</li>
+        <li><strong>Enviar comunicaciones sobre rutas y novedades</strong>: solo si marcas la casilla opcional. Puedes retirar el consentimiento en cualquier momento (art. 6.1.a y art. 21 RGPD).</li>
+        <li><strong>Atender tus derechos y reclamaciones</strong>: obligación legal (art. 6.1.c RGPD).</li>
+      </ul>
+
+      <h2>4. Destinatarios y transferencias</h2>
+      <p>Los datos se alojan en los servicios de <strong>Firebase Authentication</strong> y <strong>Cloud Firestore</strong>, prestados por Google Cloud (Google Ireland Limited y Google LLC). Actúan como encargados del tratamiento y aplican las garantías de su contrato de encargo de datos, incluidas las cláusulas contractuales tipo y, cuando proceda, el Marco de Privacidad de Datos UE-EE. UU.</p>
+      <p>No se venden datos, no se ceden a terceros con fines publicitarios y no se comparten con otras entidades salvo obligación legal. El correo electrónico también puede ser procesado por el proveedor de correo de Firebase para enviar la verificación de la cuenta y los enlaces de restablecimiento de contraseña.</p>
+
+      <h2>5. Conservación</h2>
+      <p>Los datos de la cuenta se conservan mientras la cuenta permanezca activa y, después, durante los plazos necesarios para atender posibles responsabilidades legales. El historial de accesos se conserva mientras exista la cuenta y se limita a los últimos accesos visibles en la interfaz.</p>
+      <p>Cuando solicites la supresión, se eliminarán la cuenta de Firebase Authentication, el documento de perfil y los registros de acceso asociados, salvo aquellos que deban conservarse por una obligación legal. La eliminación de la cuenta requiere una solicitud expresa por el canal de contacto indicado.</p>
+
+      <h2>6. Tus derechos</h2>
+      <p>Puedes ejercer los siguientes derechos:</p>
+      <ul>
+        <li><strong>Acceso:</strong> saber qué datos se tratan y obtener una copia.</li>
+        <li><strong>Rectificación:</strong> corregir datos inexactos o incompletos.</li>
+        <li><strong>Supresión:</strong> solicitar la eliminación cuando ya no sean necesarios.</li>
+        <li><strong>Oposición:</strong> oponerte a tratamientos basados en interés legítimo o a comunicaciones comerciales.</li>
+        <li><strong>Limitación:</strong> solicitar que se restrinja el tratamiento mientras se resuelve una reclamación.</li>
+        <li><strong>Portabilidad:</strong> recibir tus datos en un formato estructurado y de uso común.</li>
+        <li><strong>Retirar el consentimiento</strong> en cualquier momento, sin que ello afecte a la licitud del tratamiento previo.</li>
+      </ul>
+      <p>Para ejercerlos, escribe a <a href="mailto:privacidad@murciagram.es">privacidad@murciagram.es</a> indicando el derecho que deseas ejercer y el correo asociado a tu cuenta. También puedes reclamar ante la <a href="https://www.aepd.es/" target="_blank" rel="noopener noreferrer">Agencia Española de Protección de Datos (AEPD)</a>.</p>
+
+      <h2>7. Edad mínima</h2>
+      <p>Para crear una cuenta debes tener al menos <strong>14 años</strong>, conforme al artículo 7 de la LOPDGDD. Si eres menor de esa edad, no debes registrarte. La fecha de nacimiento se solicita únicamente para comprobar este requisito.</p>
+
+      <h2>8. Seguridad</h2>
+      <ul>
+        <li>Las credenciales se gestionan mediante Firebase Authentication; MurciaGram no almacena contraseñas.</li>
+        <li>Las comunicaciones con Firebase se realizan mediante HTTPS.</li>
+        <li>Las reglas de Cloud Firestore permiten a cada usuario leer y actualizar únicamente su propio perfil y crear sus propios registros de acceso.</li>
+        <li>No se permite listar todos los usuarios ni leer los perfiles de otras personas.</li>
+        <li>La aplicación aplica validaciones en el navegador, pero la seguridad efectiva depende de las reglas del backend y de la configuración de Firebase.</li>
+      </ul>
+      <p>Ningún sistema es infalible. Si detectas un acceso no autorizado, cambia tu contraseña y utiliza el canal de contacto para comunicarlo.</p>
+
+      <h2>9. Cookies y almacenamiento local</h2>
+      <p>MurciaGram no utiliza cookies publicitarias ni herramientas de analítica de terceros. Firebase Authentication puede guardar un token de sesión en el almacenamiento local o de sesión del navegador, necesario para mantener la sesión iniciada. Si marcas «Mantener la sesión en este dispositivo», el token se conserva en el almacenamiento local; si no, se elimina al cerrar la pestaña.</p>
+      <p>El <strong>modo demostración</strong> utiliza `localStorage` para guardar los datos de prueba y un hash PBKDF2 de la contraseña, exclusivamente en tu navegador. Esos datos no se envían a ningún servidor y puedes borrarlos desde la configuración del navegador.</p>
+
+      <h2>10. Modo demostración</h2>
+      <p>Cuando Firebase no está configurado, la aplicación funciona en modo demostración. En ese caso, los datos se guardan solo en el navegador y la contraseña se transforma mediante PBKDF2-SHA-256 con una sal aleatoria. Este modo sirve para probar la interfaz y no debe utilizarse con datos personales reales.</p>
+
+      <h2>11. Cambios en esta política</h2>
+      <p>La política puede actualizarse si cambian los servicios, las finalidades o la normativa. La versión vigente se mostrará en esta página y se indicará la fecha de la última actualización. Si el cambio afecta de forma sustancial al tratamiento, se solicitará de nuevo el consentimiento cuando sea necesario.</p>
+
+      <h2>12. Contacto</h2>
+      <p>Para cualquier duda sobre esta política o sobre el tratamiento de tus datos, escribe a <a href="mailto:privacidad@murciagram.es">privacidad@murciagram.es</a>. Si no recibes respuesta en el plazo legal, puedes acudir a la AEPD.</p>
+
+      <a class="legal-doc__back" href="registro.html">
+        <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg>
+        Volver al formulario de registro
+      </a>
+    </article>
+  </main>
+
+  <footer class="auth-footer">
+    <div class="auth-footer__inner">
+      <p>© <span data-year>2026</span> MurciaGram · Proyecto académico.</p>
+      <nav aria-label="Enlaces legales">
+        <ul>
+          <li><a href="privacidad.html">Privacidad</a></li>
+          <li><a href="login.html">Iniciar sesión</a></li>
+          <li><a href="index.html">Galería</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { actualizarAnio } from "./js/ui.js";
+    actualizarAnio();
+  </script>
+</body>
+</html>

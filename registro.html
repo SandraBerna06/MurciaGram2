@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear cuenta · MurciaGram</title>
+  <meta name="description" content="Crea tu cuenta de MurciaGram para guardar tus municipios favoritos de la Región de Murcia y consultar tu historial de accesos.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0f5f5c">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body class="auth-page auth-register">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <svg class="visually-hidden" aria-hidden="true" focusable="false">
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></symbol>
+    <symbol id="i-eye-off" viewBox="0 0 24 24"><path d="m3 3 18 18"/><path d="M10.6 6.2A10.9 10.9 0 0 1 12 6c6.5 0 10 6 10 6a17 17 0 0 1-3 3.7"/><path d="M6.6 6.7A17.3 17.3 0 0 0 2 12s3.5 6 10 6c1.4 0 2.7-.3 3.9-.8"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 11 9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2.1Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M11 18l-6-6 6-6"/></symbol>
+  </svg>
+
+  <header class="site-header auth-header">
+    <a class="brand" href="index.html" aria-label="MurciaGram, volver a la galería">
+      <span class="brand__mark" aria-hidden="true"><svg><use href="#i-pin"/></svg></span>
+      <span class="brand__text">Murcia<span>Gram</span></span>
+    </a>
+    <a class="auth-header__link" href="index.html">
+      <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg>
+      Volver a la galería
+    </a>
+  </header>
+
+  <main class="auth" id="contenido">
+    <section class="auth__visual" aria-labelledby="visual-title">
+      <img src="assets/img/cieza-desktop.jpg" width="1000" height="750" alt="" decoding="async">
+      <p class="eyebrow">Cuenta MurciaGram</p>
+      <h2 id="visual-title">Tu ruta por la Región, <em>guardada para siempre</em>.</h2>
+      <p class="auth__visual__lead">Crea tu cuenta para guardar los municipios que quieres visitar y volver a tus planes cuando quieras.</p>
+      <ul class="visual-list">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Guarda tus municipios favoritos y tus próximas paradas.</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Consulta tu historial de accesos y tus datos de cuenta.</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Tus datos, bajo tu control y con información clara.</li>
+      </ul>
+      <p class="visual-credit">Cieza · Floración del Valle del Segura</p>
+    </section>
+
+    <section class="auth__panel">
+      <div class="auth-card">
+        <header class="auth-card__head">
+          <p class="eyebrow">Primera vez aquí</p>
+          <h1>Crear una cuenta</h1>
+          <p class="auth-card__lead">Solo necesitamos unos datos básicos para guardar tu ruta. Tardarás menos de un minuto.</p>
+        </header>
+
+        <div class="notice notice--demo" data-demo-banner hidden>
+          <svg class="icon" aria-hidden="true"><use href="#i-info"/></svg>
+          <div>
+            <strong>Modo demostración</strong>
+            <p>Firebase no está configurado todavía. Puedes probar el registro completo: los datos se guardan solo en este navegador y la contraseña se protege con un hash. Consulta <code>GUIA-FIREBASE.md</code> para activar el backend real.</p>
+          </div>
+        </div>
+
+        <div class="form-alert" id="form-status" role="alert" tabindex="-1" hidden></div>
+
+        <form id="form-registro" novalidate autocomplete="on">
+          <div class="form-grid">
+            <div class="form-row form-row--2">
+              <div class="field">
+                <label for="nombre">Nombre <span class="req" aria-hidden="true">*</span></label>
+                <div class="field__control">
+                  <svg class="icon field__icon" aria-hidden="true"><use href="#i-user"/></svg>
+                  <input class="input input--icon" id="nombre" name="nombre" type="text" autocomplete="given-name" placeholder="Ana" maxlength="60" required aria-describedby="nombre-error">
+                </div>
+                <p class="field__error" id="nombre-error"></p>
+              </div>
+
+              <div class="field">
+                <label for="apellidos">Apellidos <span class="req" aria-hidden="true">*</span></label>
+                <div class="field__control">
+                  <svg class="icon field__icon" aria-hidden="true"><use href="#i-user"/></svg>
+                  <input class="input input--icon" id="apellidos" name="apellidos" type="text" autocomplete="family-name" placeholder="García López" maxlength="60" required aria-describedby="apellidos-error">
+                </div>
+                <p class="field__error" id="apellidos-error"></p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="email">Correo electrónico <span class="req" aria-hidden="true">*</span></label>
+              <div class="field__control">
+                <svg class="icon field__icon" aria-hidden="true"><use href="#i-mail"/></svg>
+                <input class="input input--icon" id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="tu@correo.com" maxlength="254" required aria-describedby="email-hint email-error">
+              </div>
+              <p class="field__hint" id="email-hint">Será tu identificador para iniciar sesión. No lo mostramos públicamente.</p>
+              <p class="field__error" id="email-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="password">Contraseña <span class="req" aria-hidden="true">*</span></label>
+              <div class="field__control">
+                <svg class="icon field__icon" aria-hidden="true"><use href="#i-lock"/></svg>
+                <input class="input input--icon input--password" id="password" name="password" type="password" autocomplete="new-password" placeholder="Crea una contraseña segura" minlength="8" maxlength="64" required aria-describedby="password-hint password-error strength-label password-rules">
+                <button class="password-toggle" type="button" data-toggle-password="password" aria-label="Mostrar contraseña" aria-pressed="false" title="Mostrar contraseña">
+                  <svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg>
+                </button>
+              </div>
+              <p class="field__hint" id="password-hint">Mínimo 8 caracteres. Combina mayúsculas, minúsculas y números.</p>
+              <div class="strength" id="strength" data-score="0">
+                <div class="strength__bars" aria-hidden="true">
+                  <span class="strength__bar"></span>
+                  <span class="strength__bar"></span>
+                  <span class="strength__bar"></span>
+                  <span class="strength__bar"></span>
+                </div>
+                <p class="strength__label" id="strength-label" aria-live="polite">Seguridad de la contraseña: sin evaluar</p>
+              </div>
+              <ul class="password-rules" id="password-rules">
+                <li data-rule="length"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Al menos 8 caracteres</li>
+                <li data-rule="lower"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Una letra minúscula</li>
+                <li data-rule="upper"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Una letra mayúscula</li>
+                <li data-rule="digit"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Un número</li>
+              </ul>
+              <p class="field__error" id="password-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="password2">Repetir contraseña <span class="req" aria-hidden="true">*</span></label>
+              <div class="field__control">
+                <svg class="icon field__icon" aria-hidden="true"><use href="#i-lock"/></svg>
+                <input class="input input--icon input--password" id="password2" name="password2" type="password" autocomplete="new-password" placeholder="Vuelve a escribirla" minlength="8" maxlength="64" required aria-describedby="password2-error">
+                <button class="password-toggle" type="button" data-toggle-password="password2" aria-label="Mostrar contraseña" aria-pressed="false" title="Mostrar contraseña">
+                  <svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg>
+                </button>
+              </div>
+              <p class="field__error" id="password2-error"></p>
+            </div>
+
+            <div class="form-row form-row--2">
+              <div class="field">
+                <label for="fechaNacimiento">Fecha de nacimiento <span class="req" aria-hidden="true">*</span></label>
+                <div class="field__control">
+                  <svg class="icon field__icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+                  <input class="input input--icon" id="fechaNacimiento" name="fechaNacimiento" type="date" autocomplete="bday" required aria-describedby="fecha-hint fechaNacimiento-error">
+                </div>
+                <p class="field__hint" id="fecha-hint">Solo para comprobar que tienes al menos 14 años. No se muestra en tu perfil público.</p>
+                <p class="field__error" id="fechaNacimiento-error"></p>
+              </div>
+
+              <div class="field">
+                <label for="telefono">Teléfono <span class="optional">(opcional)</span></label>
+                <div class="field__control">
+                  <svg class="icon field__icon" aria-hidden="true"><use href="#i-phone"/></svg>
+                  <input class="input input--icon" id="telefono" name="telefono" type="tel" inputmode="tel" autocomplete="tel" placeholder="600 000 000" maxlength="20" aria-describedby="telefono-error">
+                </div>
+                <p class="field__error" id="telefono-error"></p>
+              </div>
+            </div>
+
+            <fieldset class="form-fieldset">
+              <legend>Dirección postal</legend>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="calle">Calle y número <span class="req" aria-hidden="true">*</span></label>
+                  <div class="field__control">
+                    <svg class="icon field__icon" aria-hidden="true"><use href="#i-home"/></svg>
+                    <input class="input input--icon" id="calle" name="calle" type="text" autocomplete="address-line1" placeholder="Calle Mayor, 12, 3.º B" maxlength="120" required aria-describedby="calle-error">
+                  </div>
+                  <p class="field__error" id="calle-error"></p>
+                </div>
+
+                <div class="form-row form-row--3">
+                  <div class="field">
+                    <label for="codigoPostal">Código postal <span class="req" aria-hidden="true">*</span></label>
+                    <input class="input" id="codigoPostal" name="codigoPostal" type="text" inputmode="numeric" autocomplete="postal-code" placeholder="30001" maxlength="5" pattern="[0-9]{5}" required aria-describedby="cp-error">
+                    <p class="field__error" id="cp-error"></p>
+                  </div>
+
+                  <div class="field">
+                    <label for="ciudad">Ciudad / municipio <span class="req" aria-hidden="true">*</span></label>
+                    <input class="input" id="ciudad" name="ciudad" type="text" autocomplete="address-level2" placeholder="Murcia" maxlength="60" required aria-describedby="ciudad-error">
+                    <p class="field__error" id="ciudad-error"></p>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="provincia">Provincia <span class="req" aria-hidden="true">*</span></label>
+                  <input class="input" id="provincia" name="provincia" type="text" autocomplete="address-level1" placeholder="Murcia" maxlength="60" required aria-describedby="provincia-error">
+                  <p class="field__error" id="provincia-error"></p>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="check-field">
+              <label class="check">
+                <input id="terminos" name="terminos" type="checkbox" required aria-describedby="terminos-error">
+                <span>He leído y acepto la <a href="privacidad.html" target="_blank" rel="noopener noreferrer">política de privacidad</a> y el tratamiento de mis datos para gestionar mi cuenta, conforme al RGPD y la LOPDGDD. <span class="req" aria-hidden="true">*</span></span>
+              </label>
+              <p class="field__error" id="terminos-error"></p>
+            </div>
+
+            <div class="check-field">
+              <label class="check">
+                <input id="comunicaciones" name="comunicaciones" type="checkbox">
+                <span>Quiero recibir novedades y propuestas de rutas de MurciaGram. Es opcional y puedo darme de baja cuando quiera.</span>
+              </label>
+            </div>
+
+            <details class="legal">
+              <summary>Información básica sobre protección de datos</summary>
+              <div class="legal__body">
+                <p><strong>Responsable:</strong> MurciaGram (proyecto académico). <strong>Finalidad:</strong> crear y gestionar tu cuenta, autenticarte y registrar la fecha y hora de tus accesos. <strong>Base jurídica:</strong> tu consentimiento y la ejecución del servicio solicitado.</p>
+                <p><strong>Destinatarios:</strong> Firebase Authentication y Cloud Firestore (Google Cloud) como proveedores técnicos. No se venden datos ni se elaboran perfiles publicitarios. <strong>Derechos:</strong> acceso, rectificación, supresión, oposición, limitación y portabilidad escribiendo a <a href="mailto:privacidad@murciagram.es">privacidad@murciagram.es</a>. Puedes reclamar ante la AEPD.</p>
+                <p>Las contraseñas las gestiona Firebase Authentication y nunca se almacenan en Firestore. Consulta todos los detalles en la <a href="privacidad.html" target="_blank" rel="noopener noreferrer">política de privacidad</a>.</p>
+              </div>
+            </details>
+
+            <button class="btn-auth" id="btn-registro" type="submit">
+              <span>Crear mi cuenta</span>
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </button>
+            <p class="form-fineprint">Los campos marcados con <span class="req">*</span> son obligatorios. Nunca almacenamos tu contraseña en la aplicación.</p>
+          </div>
+        </form>
+
+        <p class="auth-switch">¿Ya tienes una cuenta? <a href="login.html">Inicia sesión</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="auth-footer">
+    <div class="auth-footer__inner">
+      <p>© <span data-year>2026</span> MurciaGram · Proyecto académico.</p>
+      <nav aria-label="Enlaces legales">
+        <ul>
+          <li><a href="privacidad.html">Privacidad</a></li>
+          <li><a href="login.html">Iniciar sesión</a></li>
+          <li><a href="index.html">Galería</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script type="module" src="js/registro.js"></script>
+</body>
+</html>

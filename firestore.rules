@@ -1,0 +1,134 @@
+rules_version = '2';
+
+// ============================================================
+// MurciaGram · Reglas de Cloud Firestore
+// ------------------------------------------------------------
+// Principios:
+//   - Cada usuario solo puede leer y crear su propio perfil.
+//   - Nadie puede listar todos los usuarios.
+//   - Los accesos son inmutables: solo se crean, nunca se editan.
+//   - La contraseña nunca se guarda en Firestore.
+//   - Todo lo que no esté permitido explícitamente se deniega.
+// ============================================================
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function esPropietario(uid) {
+      return request.auth != null
+        && request.auth.uid == uid
+        && request.auth.token.email != null;
+    }
+
+    function perfilValido() {
+      return request.resource.data.keys().hasOnly([
+          'nombre', 'apellidos', 'email', 'fechaNacimiento', 'telefono',
+          'direccion', 'comunicaciones', 'consentimiento',
+          'creadoEn', 'actualizadoEn', 'ultimoAcceso'
+        ])
+        && request.resource.data.keys().hasAll([
+          'nombre', 'apellidos', 'email', 'fechaNacimiento',
+          'direccion', 'consentimiento', 'creadoEn', 'actualizadoEn', 'ultimoAcceso'
+        ])
+        && request.resource.data.nombre is string
+        && request.resource.data.nombre.size() >= 2
+        && request.resource.data.nombre.size() <= 60
+        && request.resource.data.apellidos is string
+        && request.resource.data.apellidos.size() >= 2
+        && request.resource.data.apellidos.size() <= 60
+        && request.resource.data.email is string
+        && request.resource.data.email.lower() == request.auth.token.email.lower()
+        && request.resource.data.fechaNacimiento is string
+        && request.resource.data.fechaNacimiento.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')
+        && (request.resource.data.telefono == null
+            || (request.resource.data.telefono is string
+                && request.resource.data.telefono.size() <= 20))
+        && request.resource.data.direccion is map
+        && request.resource.data.direccion.keys().hasOnly([
+          'calle', 'codigoPostal', 'ciudad', 'provincia'
+        ])
+        && request.resource.data.direccion.keys().hasAll([
+          'calle', 'codigoPostal', 'ciudad', 'provincia'
+        ])
+        && request.resource.data.direccion.calle is string
+        && request.resource.data.direccion.calle.size() >= 5
+        && request.resource.data.direccion.calle.size() <= 120
+        && request.resource.data.direccion.codigoPostal is string
+        && request.resource.data.direccion.codigoPostal.matches('^[0-9]{5}$')
+        && request.resource.data.direccion.ciudad is string
+        && request.resource.data.direccion.ciudad.size() >= 2
+        && request.resource.data.direccion.ciudad.size() <= 60
+        && request.resource.data.direccion.provincia is string
+        && request.resource.data.direccion.provincia.size() >= 2
+        && request.resource.data.direccion.provincia.size() <= 60
+        && request.resource.data.comunicaciones is bool
+        && request.resource.data.consentimiento is map
+        && request.resource.data.consentimiento.keys().hasOnly([
+          'aceptado', 'fecha', 'version'
+        ])
+        && request.resource.data.consentimiento.aceptado == true
+        && request.resource.data.consentimiento.fecha == request.time
+        && request.resource.data.consentimiento.version is string
+        && request.resource.data.creadoEn == request.time
+        && request.resource.data.actualizadoEn == request.time
+        && request.resource.data.ultimoAcceso == request.time;
+    }
+
+    function actualizacionValida() {
+      return request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+          'telefono', 'direccion', 'comunicaciones', 'actualizadoEn', 'ultimoAcceso'
+        ])
+        && request.resource.data.email == resource.data.email
+        && request.resource.data.nombre == resource.data.nombre
+        && request.resource.data.apellidos == resource.data.apellidos
+        && request.resource.data.fechaNacimiento == resource.data.fechaNacimiento
+        && request.resource.data.consentimiento == resource.data.consentimiento
+        && request.resource.data.creadoEn == resource.data.creadoEn
+        && request.resource.data.actualizadoEn == request.time
+        && (request.resource.data.telefono == null
+            || (request.resource.data.telefono is string
+                && request.resource.data.telefono.size() <= 20))
+        && request.resource.data.direccion is map
+        && request.resource.data.direccion.keys().hasOnly([
+          'calle', 'codigoPostal', 'ciudad', 'provincia'
+        ])
+        && request.resource.data.direccion.calle is string
+        && request.resource.data.direccion.calle.size() >= 5
+        && request.resource.data.direccion.calle.size() <= 120
+        && request.resource.data.direccion.codigoPostal is string
+        && request.resource.data.direccion.codigoPostal.matches('^[0-9]{5}$')
+        && request.resource.data.direccion.ciudad is string
+        && request.resource.data.direccion.ciudad.size() >= 2
+        && request.resource.data.direccion.provincia is string
+        && request.resource.data.direccion.provincia.size() >= 2
+        && request.resource.data.comunicaciones is bool;
+    }
+
+    // Perfil del usuario. El correo es el identificador y no se puede cambiar
+    // desde el perfil: se modifica desde Firebase Authentication.
+    match /usuarios/{uid} {
+      allow get: if esPropietario(uid);
+      allow list: if false;
+      allow create: if esPropietario(uid) && perfilValido();
+      allow update: if esPropietario(uid) && actualizacionValida();
+      allow delete: if false;
+    }
+
+    // Historial de accesos: solo se añaden registros propios e inmutables.
+    match /usuarios/{uid}/accesos/{accesoId} {
+      allow read: if esPropietario(uid);
+      allow create: if esPropietario(uid)
+        && request.resource.data.keys().hasOnly(['tipo', 'fecha', 'userAgent'])
+        && request.resource.data.tipo in ['registro', 'login']
+        && request.resource.data.fecha == request.time
+        && request.resource.data.userAgent is string
+        && request.resource.data.userAgent.size() <= 200;
+      allow update, delete: if false;
+    }
+
+    // Denegación explícita del resto de rutas.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión · MurciaGram</title>
+  <meta name="description" content="Accede a tu cuenta de MurciaGram para consultar tu perfil y tu historial de accesos.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0f5f5c">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body class="auth-page auth-login">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <svg class="visually-hidden" aria-hidden="true" focusable="false">
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></symbol>
+    <symbol id="i-eye-off" viewBox="0 0 24 24"><path d="m3 3 18 18"/><path d="M10.6 6.2A10.9 10.9 0 0 1 12 6c6.5 0 10 6 10 6a17 17 0 0 1-3 3.7"/><path d="M6.6 6.7A17.3 17.3 0 0 0 2 12s3.5 6 10 6c1.4 0 2.7-.3 3.9-.8"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m12 11 8-8M17 4l3 3M14 7l3 3"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M11 18l-6-6 6-6"/></symbol>
+  </svg>
+
+  <header class="site-header auth-header">
+    <a class="brand" href="index.html" aria-label="MurciaGram, volver a la galería">
+      <span class="brand__mark" aria-hidden="true"><svg><use href="#i-pin"/></svg></span>
+      <span class="brand__text">Murcia<span>Gram</span></span>
+    </a>
+    <a class="auth-header__link" href="index.html">
+      <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg>
+      Volver a la galería
+    </a>
+  </header>
+
+  <main class="auth" id="contenido">
+    <section class="auth__visual" aria-labelledby="visual-title">
+      <img src="assets/img/cartagena-desktop.jpg" width="1000" height="750" alt="" decoding="async">
+      <p class="eyebrow">Qué bueno verte</p>
+      <h2 id="visual-title">Vuelve a tu ruta por <em>Murcia</em>.</h2>
+      <p class="auth__visual__lead">Tu cuenta guarda los lugares que te han enamorado y el historial de tus visitas. Todo en un mismo sitio.</p>
+      <ul class="visual-list">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Retoma tus municipios guardados donde los dejaste.</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Consulta cuándo y desde qué navegador has accedido.</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Tu contraseña la gestiona Firebase, nunca MurciaGram.</li>
+      </ul>
+      <p class="visual-credit">Cartagena · Teatro Romano y puerto</p>
+    </section>
+
+    <section class="auth__panel">
+      <div class="auth-card">
+        <header class="auth-card__head">
+          <p class="eyebrow">Cuenta MurciaGram</p>
+          <h1>Iniciar sesión</h1>
+          <p class="auth-card__lead">Accede con el correo y la contraseña que usaste al registrarte.</p>
+        </header>
+
+        <div class="notice notice--demo" data-demo-banner hidden>
+          <svg class="icon" aria-hidden="true"><use href="#i-info"/></svg>
+          <div>
+            <strong>Modo demostración</strong>
+            <p>Firebase no está configurado todavía. Puedes crear una cuenta de prueba y acceder con ella: los datos se guardan solo en este navegador. Consulta <code>GUIA-FIREBASE.md</code> para activar el backend real.</p>
+          </div>
+        </div>
+
+        <div class="form-alert" id="form-status" role="alert" tabindex="-1" hidden></div>
+
+        <form id="form-login" novalidate autocomplete="on">
+          <div class="form-grid">
+            <div class="field">
+              <label for="email">Correo electrónico <span class="req" aria-hidden="true">*</span></label>
+              <div class="field__control">
+                <svg class="icon field__icon" aria-hidden="true"><use href="#i-mail"/></svg>
+                <input class="input input--icon" id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="tu@correo.com" maxlength="254" required aria-describedby="email-error">
+              </div>
+              <p class="field__error" id="email-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="password">Contraseña <span class="req" aria-hidden="true">*</span></label>
+              <div class="field__control">
+                <svg class="icon field__icon" aria-hidden="true"><use href="#i-lock"/></svg>
+                <input class="input input--icon input--password" id="password" name="password" type="password" autocomplete="current-password" placeholder="Tu contraseña" maxlength="64" required aria-describedby="password-error">
+                <button class="password-toggle" type="button" data-toggle-password="password" aria-label="Mostrar contraseña" aria-pressed="false" title="Mostrar contraseña">
+                  <svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg>
+                </button>
+              </div>
+              <p class="field__error" id="password-error"></p>
+            </div>
+
+            <div class="form-row--between">
+              <label class="check check--compact">
+                <input id="recordar" name="recordar" type="checkbox">
+                <span>Mantener la sesión en este dispositivo</span>
+              </label>
+              <button class="link-button" id="btn-olvide" type="button">¿Olvidaste tu contraseña?</button>
+            </div>
+
+            <button class="btn-auth" id="btn-login" type="submit">
+              <span>Entrar en mi cuenta</span>
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </button>
+          </div>
+        </form>
+
+        <div class="auth-divider">o</div>
+        <a class="btn-auth btn-auth--ghost" href="registro.html">
+          <svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>
+          Crear una cuenta nueva
+        </a>
+
+        <p class="form-fineprint">Al iniciar sesión se registra la fecha y hora del acceso. Consulta la <a href="privacidad.html">política de privacidad</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="auth-dialog" id="dialog-reset" aria-labelledby="reset-title">
+    <form class="auth-dialog__form" id="form-reset" novalidate>
+      <button class="auth-dialog__close" id="btn-cerrar-reset" type="button" aria-label="Cerrar el diálogo">×</button>
+      <p class="eyebrow">Recuperar acceso</p>
+      <h2 id="reset-title">Restablecer contraseña</h2>
+      <p class="auth-dialog__lead">Escribe el correo con el que te registraste y te enviaremos un enlace para elegir una nueva contraseña.</p>
+
+      <div class="field">
+        <label for="email-reset">Correo electrónico</label>
+        <div class="field__control">
+          <svg class="icon field__icon" aria-hidden="true"><use href="#i-mail"/></svg>
+          <input class="input input--icon" id="email-reset" name="email-reset" type="email" inputmode="email" autocomplete="email" placeholder="tu@correo.com" maxlength="254" required aria-describedby="email-reset-error">
+        </div>
+        <p class="field__error" id="email-reset-error"></p>
+      </div>
+
+      <div class="form-alert" id="reset-status" role="alert" hidden></div>
+
+      <button class="btn-auth" id="btn-reset" type="submit">
+        <svg class="icon" aria-hidden="true"><use href="#i-key"/></svg>
+        Enviar enlace
+      </button>
+      <p class="form-fineprint">Por seguridad, no confirmamos si un correo está registrado o no.</p>
+    </form>
+  </dialog>
+
+  <footer class="auth-footer">
+    <div class="auth-footer__inner">
+      <p>© <span data-year>2026</span> MurciaGram · Proyecto académico.</p>
+      <nav aria-label="Enlaces legales">
+        <ul>
+          <li><a href="privacidad.html">Privacidad</a></li>
+          <li><a href="registro.html">Crear cuenta</a></li>
+          <li><a href="index.html">Galería</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script type="module" src="js/login.js"></script>
+</body>
+</html>

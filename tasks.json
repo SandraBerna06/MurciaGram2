@@ -1,0 +1,18 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Optimizar imágenes (ImageMagick)",
+      "detail": "assets/raw/*.jpg → assets/img/<nombre>-mobile.jpg (400x300) y <nombre>-desktop.jpg (1000x750)",
+      "type": "shell",
+      "command": "bash \"${workspaceFolder}/scripts/optimize-images.sh\"",
+      "options": { "cwd": "${workspaceFolder}" },
+      "windows": {
+        "command": "powershell -NoProfile -ExecutionPolicy Bypass -File \"${workspaceFolder}/scripts/optimize-images.ps1\""
+      },
+      "group": { "kind": "build", "isDefault": true },
+      "presentation": { "reveal": "always", "panel": "shared", "clear": true },
+      "problemMatcher": []
+    }
+  ]
+}
