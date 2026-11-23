@@ -1,0 +1,44 @@
+﻿MURCIAGRAM - COMO ABRIR EL PROYECTO EN VS CODE
+
+1. Abre esta carpeta completa en VS Code: Archivo > Abrir carpeta...
+2. Instala la extension "Live Server" (Ritwick Dey).
+3. Haz clic derecho sobre index.html y elige "Open with Live Server".
+   Tambien puedes usar la terminal integrada:
+       npx serve .
+4. El navegador abrira la pagina y las imagenes se veran porque estan en:
+       assets/img/
+
+CUENTAS DE USUARIO
+- Registro:  registro.html
+- Acceso:    login.html
+- Mi cuenta: cuenta.html
+- Privacidad: privacidad.html
+
+IMPORTANTE
+- index.html, styles.css, auth.css, js/ y assets/ deben estar juntos.
+- No muevas ni renombres las imagenes: el HTML las busca por su nombre exacto.
+- Las paginas de registro, acceso y cuenta necesitan abrirse por HTTP o HTTPS
+  (por ejemplo, http://localhost:3000). Con doble clic (file://) los modulos
+  JavaScript y el modo demostracion no funcionan.
+- La galeria (index.html) si funciona con doble clic.
+
+MODO DEMOSTRACION
+- Mientras js/firebase-config.js tenga los valores de ejemplo, la aplicacion
+  funciona sin Firebase y guarda los datos solo en este navegador.
+- La contrasena se protege con PBKDF2-SHA-256 y una sal aleatoria; nunca se
+  guarda en texto plano.
+- Para activar Firebase real, sigue las instrucciones de GUIA-FIREBASE.md.
+
+DOCUMENTACION
+- design.md         Sistema de diseno.
+- MEMORIA.md        Memoria academica del sistema de cuentas.
+- GUIA-FIREBASE.md  Configuracion paso a paso de Firebase y reglas.
+- PRUEBAS.md        Pruebas realizadas y resultados.
+- PROMPTS.md        Prompts de IA y verificacion humana.
+- docs/capturas/    Capturas de escritorio y movil.
+- docs/informes/    Informes de Lighthouse.
+
+ANTES DE PUBLICAR
+- Sustituye el correo de ejemplo privacidad@murciagram.es por uno real.
+- Revisa la politica de privacidad y los datos del responsable.
+- Publica firestore.rules y anade el dominio a los dominios autorizados.

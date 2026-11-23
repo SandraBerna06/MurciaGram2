@@ -7,16 +7,20 @@
 Una galería visual, libre y sencilla, para conocer ocho lugares de la Región de Murcia a través de sus fotografías, su historia y su gastronomía.
 
 <p align="center">
-  <a href="https://sandraberna06.github.io/Murciagram/">
+  <a href="https://sandraberna06.github.io/MurciaGram2/">
     <img src="https://img.shields.io/badge/Abrir_MurciaGram-ver_la_web-0f5f5c?style=for-the-badge&logo=githubpages&logoColor=white" alt="Abrir MurciaGram">
+  </a>
+  <a href="https://github.com/SandraBerna06/MurciaGram2">
+    <img src="https://img.shields.io/badge/Repositorio-P%C3%BAblico-181717?style=for-the-badge&logo=github&logoColor=white" alt="Repositorio público en GitHub">
   </a>
 </p>
 
-> **Enlace directo:** **https://sandraberna06.github.io/Murciagram/**
-> No hace falta instalar nada: se abre en el navegador del móvil, la tablet o el ordenador.
+> **Web pública (GitHub Pages):** **https://sandraberna06.github.io/MurciaGram2/**
 >
-> [!WARNING]
-> Ese enlace muestra todavía **la galería original**: la fase de cuentas está terminada en local, pero aún no se ha subido al repositorio `sandraberna06/Murciagram` ni a GitHub Pages. Hay que hacer *commit* y *push* de esta carpeta para que `registro.html`, `login.html`, `cuenta.html` y `privacidad.html` queden publicados.
+> Este repositorio es **público**: cualquiera puede ver el código, abrir la web y probar el registro de usuarios. No hace falta instalar nada.
+
+> [!IMPORTANT]
+> Para que la web funcione, el repositorio debe conservar **la estructura de carpetas**: `js/`, `assets/img/`, `docs/capturas/`, `docs/informes/` y `scripts/`. Si se suben todos los archivos sueltos a la raíz, las imágenes y los módulos JavaScript no se encuentran. Consulta [Publicar la web](#publicar-la-web).
 
 ---
 
@@ -110,7 +114,7 @@ Las capturas están en [`docs/capturas/`](docs/capturas/) y los informes de Ligh
 
 Consejos rápidos:
 
-1. Entra en **https://sandraberna06.github.io/Murciagram/**.
+1. Entra en **https://sandraberna06.github.io/MurciaGram2/**.
 2. Desplázate por la galería o usa los enlaces de municipios.
 3. Pasa el ratón por una foto (o tócala en el móvil) para leer su descripción.
 4. Pulsa el corazón si quieres marcarla y el enlace para visitar la web oficial.
@@ -179,8 +183,8 @@ Si reutilizas una fotografía, conserva la atribución y la licencia indicadas.
 No es necesario para consultar la web, pero si quieres abrirlo en tu ordenador:
 
 ```bash
-git clone https://github.com/sandraberna06/Murciagram.git
-cd Murciagram
+git clone https://github.com/SandraBerna06/MurciaGram2.git
+cd MurciaGram2
 ```
 
 Después, en VS Code, abre la carpeta y usa **Live Server** sobre `index.html`. También puedes ejecutar:
@@ -196,6 +200,36 @@ Para conectar un proyecto Firebase real, sigue [`GUIA-FIREBASE.md`](GUIA-FIREBAS
 
 ---
 
+## Publicar la web
+
+El repositorio `SandraBerna06/MurciaGram2` es público. Para que GitHub Pages sirva la web:
+
+1. Sube **las carpetas completas**, no los archivos sueltos. La raíz debe quedar así:
+   ```text
+   MurciaGram2/
+   ├── index.html
+   ├── registro.html
+   ├── login.html
+   ├── cuenta.html
+   ├── privacidad.html
+   ├── styles.css
+   ├── auth.css
+   ├── js/
+   ├── assets/
+   ├── docs/
+   ├── scripts/
+   └── ...
+   ```
+2. En GitHub entra en **Settings → Pages**.
+3. En **Build and deployment**, elige **Deploy from a branch**.
+4. Selecciona la rama **`main`** y la carpeta **`/ (root)`**. Guarda.
+5. Espera 1–2 minutos y abre **https://sandraberna06.github.io/MurciaGram2/**.
+6. Comprueba que `https://sandraberna06.github.io/MurciaGram2/registro.html` carga y que la galería muestra **“Acceder”** en la cabecera.
+
+> Si los archivos están todos en la raíz del repositorio, borra esa subida y vuelve a arrastrar **las carpetas** desde el ZIP de entrega. Las rutas relativas (`assets/img/…`, `js/…`, `docs/…`) son obligatorias.
+
+---
+
 ## Licencia
 
 - **Código** (`index.html`, `styles.css`, `auth.css`, `js/`, scripts y páginas de cuenta): proyecto académico; puede reutilizarse con fines educativos citando la autoría.
@@ -205,7 +239,7 @@ Para conectar un proyecto Firebase real, sigue [`GUIA-FIREBASE.md`](GUIA-FIREBAS
 ---
 
 <p align="center">
-  Proyecto de <a href="https://github.com/sandraberna06">@sandraberna06</a> · Región de Murcia · 2026
+  Proyecto de <a href="https://github.com/SandraBerna06">@SandraBerna06</a> · Región de Murcia · 2026
   <br>
-  <a href="https://sandraberna06.github.io/Murciagram/">sandraberna06.github.io/Murciagram</a>
+  <a href="https://sandraberna06.github.io/MurciaGram2/">sandraberna06.github.io/MurciaGram2</a>
 </p>

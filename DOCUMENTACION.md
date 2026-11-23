@@ -13,7 +13,7 @@
 > **Documento de la fase original (HTML + CSS).** La versión actual de MurciaGram añade **cuentas de usuario** con JavaScript modular, Firebase Authentication y Cloud Firestore. La guía técnica de esa fase está en [`MEMORIA.md`](MEMORIA.md), la configuración del backend en [`GUIA-FIREBASE.md`](GUIA-FIREBASE.md), las pruebas en [`PRUEBAS.md`](PRUEBAS.md) y el sistema de diseño en [`design.md`](design.md). Las referencias a “sin JavaScript” y al árbol de archivos de este documento describen la galería original, no la entrega completa.
 
 > [!NOTE]
-> **Demo:** `https://sandraberna06.github.io/Murciagram/`
+> **Demo:** `https://sandraberna06.github.io/MurciaGram2/`
 > Sustituye `sandraberna06` por tu usuario de GitHub antes de publicar. El proyecto está listo para GitHub Pages.
 
 ---
@@ -247,12 +247,12 @@ Las fotografías proceden de **Wikimedia Commons** y se han recortado y optimiza
    git add .
    git commit -m "MurciaGram: galería visual de la Región de Murcia"
    git branch -M main
-   git remote add origin https://github.com/sandraberna06/Murciagram.git
+   git remote add origin https://github.com/SandraBerna06/MurciaGram2.git
    git push -u origin main
    ```
 
 3. En GitHub: **Settings → Pages → Deploy from a branch → `main` / (root)**.
-4. Espera un par de minutos y abre `https://sandraberna06.github.io/Murciagram/`.
+4. Espera un par de minutos y abre `https://sandraberna06.github.io/MurciaGram2/`.
 
 ### Antes de publicar, sustituye `sandraberna06`
 
